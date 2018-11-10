@@ -1,0 +1,71 @@
+\documentclass[margin]{res}
+
+\setlength{\textwidth}{5.1in} % set width of text portion
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,      
+    urlcolor=black,
+}
+\urlstyle{same}
+
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Alexander Spangher}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{(631) 487-7777 or alexander.spangher@nytimes.com; New York City, NY}
+
+
+\begin{resume}
+
+\section{EDUCATION} {\bf Columbia University}, M.S. in Journalism \hfill {\sl Class of 2018}\\
+{\bf Columbia University}, M.S. in Data Science \hfill {\sl Class of 2017}\\
+				   {\bf Columbia University}, B.S. in Neuroscience {\sl and} B.S. in C.S. \hfill {\sl Class of 2014}
+					% \sl will be bold italic in New Century Schoolbook (or any postscript font) and just slanted in Computer Modern (default) font
+
+
+\section{RELEVANT \\ EXPERIENCE} 
+{\sl \bf New York Times}, NYC, NY {\sl Data Scientist} \hfill {\it 2014- present}\\
+\begin{itemize}
+\item Designed and implemented LDA-based article recommendation algorithm, scaled to all users. Built using Luigi-powered data pipelines, MySQL data storage, and WSGI API layer. See blogpost: \url{https://open.blogs.nytimes.com/2015/08/11/building- the-next-new-york-times-recommendation-engine/.}
+\item Launched ML tools to improve newsroom processes. Used unsupervised variational and embedding approaches and NLP feature engineering. Designed architecture using Google Cloud Services: DataStore, GKE and BigQuery.
+\item Used MTurk to crowd-source emotion-tags for articles. Constructed classifiers to learn these tags with deep and shallow approaches. Developed distributed gridsearch pipeline using Spark and CloudML to explore parameter space.
+\item Designed Bayesian models for Followable-recommendation algorithm. Implemented using Scipy optimization packages.
+\item Explored extensions of article-recommendation algorithm using multi-armed and contextual bandit algorithms.
+\item Conducted statistical analyses of audience segments and assessed causal impact of new products.
+\end{itemize}
+
+{\sl \bf Huffington Post}, NYC, NY {\sl Software Engineering Intern} \hfill {\it Summer 2013}\\
+\begin{itemize}
+\item Redesigned the core framework of the user-profile API using Scala.
+\item HuffPost Hires app (Angular/Clojure/MongoDB). Improved interview process.
+\end{itemize}
+{\sl \bf SustainabilityExcellence}, Amman, Jordan {\sl Consulting Intern} \hfill {\it Summer 2012}\\
+\begin{itemize}
+\item Built MYSQL framework for Emir of Qatar's Sustainability Conference.
+\end{itemize}
+
+\section{ADDITIONAL \\ EXPERIENCE} 
+{\sl \bf New York Times: Diversity Initiatives}: {\sl Co-chair and Founder} of the New York Times Young Professionals Network. {\sl Acknowledged contributor} to Unpublished, a photo-novel on Black history.\\
+{\sl \bf Marvel Theater}: {\sl Double Bassist} for critically-acclaimed off-Broadway play. 
+
+\section{ACADEMIC \\HONORS and \\LEADERSHIP}  
+
+{\sl \bf John Jay Scholar}: Neuroscience and Computer Science, Columbia University.\\ 
+{\sl \bf Dean's List}: Columbia College\\
+{\sl \bf Scholarships}: Intel STS Semi-finalist, National Merit Scholarship\\
+{\sl \bf Op-Ed Writer}: Weekly Blogger at Columbia Spectator.\\
+\\
+{\bf Languages \& Software used in production}: Python, SQL, D3.js, Javascript, JQuery, Java, Scala, C, C++, CUDA, OpenCL, \LaTeX. Google Cloud Services, Amazon Web Services. Spark, DataBricks. Kubernetes, Docker, Drone. SkLearn, Tensorflow, Keras, CVXOpt. NVIDIA.
+
+\end{resume}
+\end{document}
+
+
+
+
