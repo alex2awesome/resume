@@ -7,61 +7,320 @@
     linkcolor=black,      
     urlcolor=black,
 }
+
+%\usepackage{setspace} % for \onehalfspacing and \singlespacing macros
+%\onehalfspacing 
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{}%\singlespacing\small}
+
+
+\newcommand{\fullhrulefill}{%
+	\vspace{.7\baselineskip}
+	\hspace*{-\sectionwidth}\hrulefill%
+}
 \urlstyle{same}
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
+	\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+	\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+	\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+	\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+	\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+	\do\Y\do\Z}
 
 
 \begin{document}
 
 % Center the name over the entire width of resume:
- \moveleft.5\hoffset\centerline{\large\bf Alexander Spangher}
+ \moveleft.5\hoffset\centerline{\large\large\large\large\large\large\bf ALEXANDER SPANGHER}
+ \vspace{\baselineskip}
+ \moveleft.5\hoffset\centerline{ \large\large\large \textbf{\textit{Curriculum Vitae}}}
+  \vspace{\baselineskip}
 % Draw a horizontal line the whole width of resume:
  \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+   \vspace{\baselineskip}
 % address begins here
 % Again, the address lines must be centered over entire width of resume:
- \moveleft.5\hoffset\centerline{(631) 487-7777 or alexander.spangher@nytimes.com; New York City, NY}
-
+% \moveleft.5\hoffset\centerline{} 
+\moveleft.5\hoffset\centerline{237 McKendry Drive, Menlo Park, CA}
+\moveleft.5\hoffset\centerline{Phone: (631) 487-7777} \moveleft.5\hoffset\centerline{Email: alexander.spangher@cmu.edu}
+\moveleft.5\hoffset\centerline{Website: \textbf{https://alexander-spangher.com}}
 
 \begin{resume}
-
-\section{EDUCATION} {\bf Columbia University}, M.S. in Journalism \hfill {\sl Class of 2018}\\
-{\bf Columbia University}, M.S. in Data Science \hfill {\sl Class of 2017}\\
-				   {\bf Columbia University}, B.S. in Neuroscience {\sl and} B.S. in C.S. \hfill {\sl Class of 2014}
-					% \sl will be bold italic in New Century Schoolbook (or any postscript font) and just slanted in Computer Modern (default) font
+\section{RESEARCH OBJECTIVES}
+Language modeling in large-corpus domains to categorize and summarize texts, with a focus on journalistic practice and tooling.
+Analytically studying modern media developments, including misinformation and online trolling. Methods: Bayesian modeling, deep learning, crowdsourcing and active learning.
 
 
-\section{RELEVANT \\ EXPERIENCE} 
-{\sl \bf New York Times}, NYC, NY {\sl Data Scientist} \hfill {\it 2014- present}\\
+\section{EDUCATION}
+\fullhrulefill
+\section{Doctoral Student}
+{\bf Carnegie Mellon University}  \hfill {\sl 2018-present}\\
+\-\hspace{.8cm} Graduate Studies, Electrical and Computer Engineering
+\section{M.S.}
+{\bf Columbia University}\footnote{Masters degrees pursued part-time while working full-time at the \textit{New York Times}.} \hfill {\sl2014-2018}\\
+\-\hspace{.8cm} Master of Science in Data Science \\ 
+\-\hspace{.8cm} Master of Science in Journalism
+\section{B.S.}
+% \-\hspace{.8cm} \textit{Note:} 
+{\bf Columbia University} \hfill {\sl2010-2014} \\
+\-\hspace{.8cm} Bachelor of Science in Neuroscience\\
+\-\hspace{.8cm} Bachelor of Science in Computer Science
+
+\section{HONORS}
+\fullhrulefill
+\section{Academic Honors}
 \begin{itemize}
-\item Designed and implemented LDA-based article recommendation algorithm, scaled to all users. Built using Luigi-powered data pipelines, MySQL data storage, and WSGI API layer. See blogpost: \url{https://open.blogs.nytimes.com/2015/08/11/building- the-next-new-york-times-recommendation-engine/.}
-\item Launched ML tools to improve newsroom processes. Used unsupervised variational and embedding approaches and NLP feature engineering. Designed architecture using Google Cloud Services: DataStore, GKE and BigQuery.
-\item Used MTurk to crowd-source emotion-tags for articles. Constructed classifiers to learn these tags with deep and shallow approaches. Developed distributed gridsearch pipeline using Spark and CloudML to explore parameter space.
-\item Designed Bayesian models for Followable-recommendation algorithm. Implemented using Scipy optimization packages.
-\item Explored extensions of article-recommendation algorithm using multi-armed and contextual bandit algorithms.
-\item Conducted statistical analyses of audience segments and assessed causal impact of new products.
+	\item[] \textbf{John Jay Scholar}. Columbia University. \hfill \textit{2010-2014}
+	\item[] \textbf{Dean's List}. Columbia University. \hfill \textit{2011}
 \end{itemize}
 
-{\sl \bf Huffington Post}, NYC, NY {\sl Software Engineering Intern} \hfill {\it Summer 2013}\\
+\section{Funding}
 \begin{itemize}
-\item Redesigned the core framework of the user-profile API using Scala.
-\item HuffPost Hires app (Angular/Clojure/MongoDB). Improved interview process.
+	\item[] Columbia School of Journalism  Scholarship. \$78,000. \hfill \textit{2016-2017}
+	\item[] \textit{New York Times} Tuition Scholarship \$32,000. \hfill \textit{2014-2018}
+	\item[] John Jay Scholar Summer Funding. \$20,000 \hfill \textit{2011-2012}
+	\item[] Intel STS Semi-finalist. \$10,000. \hfill \textit{2009}
+%	\item[] National Merit Scholarship. \$1,000. \hfill \textit{2009}
 \end{itemize}
-{\sl \bf SustainabilityExcellence}, Amman, Jordan {\sl Consulting Intern} \hfill {\it Summer 2012}\\
+%\end{itemize}
+
+%\\ % corpus classification 
+\section{GREs}
+%\vspace{2\baselineskip}
+\fullhrulefill
+\section{}
+\textbf{Verbal Reasoning:} \hfill 167/170\\
+\textbf{Quantitative Reasoning:} \hfill 165/170\\
+\textbf{Analytical Writing:} \hfill 4.5/6
+
+%\vspace{2\baselineskip}
+\section{PUBLICATIONS}
+\fullhrulefill
+\section{Academic\\Publications}
+%\textbf{\\ Academic Publications}
+\begin{enumerate}
+	\item \textbf{Alexander Spangher}, Gireeja Ranade, Besamira Nushi, Adam Fourney, Eric Horvitz. Analysis of Strategy and Spread of Russia-sponsored Content in the US in 2017. \textit{International Conference for Web and Social Media, AAAI. \underline{Revise and Resubmit.}} 2018. \url{https://arxiv.org/pdf/1810.10033}
+	%
+	\item \textbf{Alexander Spangher}, Berk Ustun. Actionable Recourse in Linear Classification. \textit{Proceedings of the 5th Workshop on Fairness, Accountability and Transparency in Machine Learning, ICML. \underline{Accepted.}} 2018. \url{https://bit.ly/2FEj9pf}
+	%
+	\item \textbf{Alexander Spangher}, Berk Ustun. Actionable Recourse in Linear Classification in Practice. \textit{Workshop on Ethical, Social and Governance Issues in AI, 2018, NIPS. \underline{Accepted}} 2018. 
+	%
+	\item Berk Ustun, \textbf{Alexander Spangher}, Yang Liu. Actionable Recourse in Linear Classification. (Expanded Version). \textit{Conference on Fairness, Accountability and Transparency (FAT*), 2019, ACM. \underline{Accepted}} 2018. \url{https://arxiv.org/pdf/1809.06514.pdf}
+	%
+	\item Ryan L Boyd, \textbf{Alexander Spangher}, Adam Fourney, Besmira Nushi, Gireeja Ranade, James Pennebaker, Eric Horvitz. Characterizing the Internet Research Agency’s Social Media Operations During the 2016 US Presidential Election using Linguistic Analyses. \textit{Whitepaper, \underline{Published.}} \url{https://bit.ly/2SczIKt}
+	%
+\end{enumerate}
+
+\section{In Preparation}
+\begin{enumerate}
+	\item \textbf{Alexander Spangher}, Gireeja Ranade, Adam Fourney, Besamira Nushi. Falling into the Rabbit Hole: Browsing Patterns Among Fake News Users. 2019.
+	\item \textbf{Alexander Spangher}, Jia Zhang, Rahul Ramachandran, Manil Maskey, Patrick Gatlin, J.J. Miller, Sundar Christopher. Methodology for Building Scalable Knowledge Graphs using Pre-existing NASA Ontologies. 2019.
+\end{enumerate}
+
+\section{Newspaper Articles and Graphics (Selected)}
+%\textbf{Selected Journalism Publications, Blogs and Interactive Graphics}
+\begin{enumerate}
+	%
+	\item \textbf{Alexander Spangher}. Building the Next New York Times Recommendation Engine. \textit{The New York Times}. \url{https://nyti.ms/2zpGG5g}
+	%
+	\item \textbf{Alexander Spangher}. How Does This Article Make You Feel? Using data science to predict the emotional resonance of New York Times articles for better ad placement. \textit{The New York Times}. \url{https://nyti.ms/2PyHkcn}.
+	%
+	\item \textbf{Alexander Spangher}. What the Paris attacks tell us about how foreign news gets made. \textit{Columbia Journalism Review}. \url{https://bit.ly/2DIV2TH}
+	\item \textbf{Alexander Spangher}. 19 Countries, 43 States, 327 Cities: Mapping The Times’s Election Coverage. \textit{The New York Times}. \url{https://nyti.ms/2ScnEbV}
+	\item \textbf{Alexander Spangher}. Eye on the Prize: 100 years worth of Pulitzer Prize Winners by Race, Gender and Location. \textit{Columbia Journalism Review}. \url{https://bit.ly/2r2YEIT}
+	\item \textbf{Alexander Spangher}. 3 Smart Data Journalism Techniques that can help you find stories faster. \textit{Medium}. \url{https://bit.ly/2DIUydH}.	
+	\item For more articles and graphics, see: \url{alexander-spangher.com/data-vis.html}
+\end{enumerate}
+
+\vspace{5\baselineskip}
+\section{PROFESSIONAL EXPERIENCE}
+\vspace{\baselineskip}
+\fullhrulefill
+\section{Research Experience}
+{\sl \bf Carnegie Mellon Univ.}, Mountain View, CA {\sl Ph.D. Student} \hfill {\it 2018-present}\\
+\textit{Advisor:} Jia Zhang.\\
+\textit{Knowledge Graph Construction for NASA Earth Sciences}.
 \begin{itemize}
-\item Built MYSQL framework for Emir of Qatar's Sustainability Conference.
+	\item Text-modeling using hierarchical topic modeling to improve and model existing NASA concept-ontologies.
+	\item Text-matching and word-modeling using custom lexical parsing rules to extract datasets, variables and methods from papers.
+	\item Visualization/tooling in D3.js with an emphasis on interpretability and ease of capturing user feedback.
 \end{itemize}
 
-\section{ADDITIONAL \\ EXPERIENCE} 
-{\sl \bf New York Times: Diversity Initiatives}: {\sl Co-chair and Founder} of the New York Times Young Professionals Network. {\sl Acknowledged contributor} to Unpublished, a photo-novel on Black history.\\
-{\sl \bf Marvel Theater}: {\sl Double Bassist} for critically-acclaimed off-Broadway play. 
 
-\section{ACADEMIC \\HONORS and \\LEADERSHIP}  
+{\sl \bf Microsoft Research}, Redmond, WA {\sl Research Intern} \hfill {\it Summer 2018}\\
+\textit{Advisors:} Gireeja Ranade, Adam Fourney, Besamira Nushi, Eric Horvitz.\\
+\textit{Large-scale analysis of user-behavior changes in response to misinformation}\\
+\begin{itemize}
+	\item Data analysis merging data from Facebook, Twitter and Microsoft. Causal modeling using counterfactual analysis.
+	\item Text-modeling using TF-IDF to track search query changes over time.
+	\item Intensive fact-checking, informal Congressional briefing, contact with staff of Congressman Adam Schiff (Representative, D-CA 28th District).
+\end{itemize}
 
-{\sl \bf John Jay Scholar}: Neuroscience and Computer Science, Columbia University.\\ 
-{\sl \bf Dean's List}: Columbia College\\
-{\sl \bf Scholarships}: Intel STS Semi-finalist, National Merit Scholarship\\
-{\sl \bf Op-Ed Writer}: Weekly Blogger at Columbia Spectator.\\
-\\
-{\bf Languages \& Software used in production}: Python, SQL, D3.js, Javascript, JQuery, Java, Scala, C, C++, CUDA, OpenCL, \LaTeX. Google Cloud Services, Amazon Web Services. Spark, DataBricks. Kubernetes, Docker, Drone. SkLearn, Tensorflow, Keras, CVXOpt. NVIDIA.
+
+\section{Employment}
+{\sl \bf New York Times}, NYC, NY {\sl Data Scientist} \hfill {\it 2014-2018}\\
+\textit{Advisors:} Chris Wiggins, Jose Muanis Castro, Thompson Marzagao.\\
+%\begin{itemize}
+\textit{Collaborative Topic Models for Article Recommendations:} 
+\begin{itemize}
+	\item Created an improved article recommendation-engine by building a topic model to incorporate information from article-text and user clicks. Scale to millions of users and provide recommendations in real-time.
+	\item Modeling: Custom-designed Bayesian model that extends Latent Dirichlet Allocation, coded in C++.
+	\item Collaboration: Dr. David Blei, Jake Hoffman, and Prem Gopalan, Columbia University. See \url{https://arxiv.org/pdf/1311.1704.pdf.}
+	\item Deployment: MySQL, WSGI API, Luigi data pipelines.
+	\item Extensions: multi-armed bandit and contextual bandit algorithms.	
+\end{itemize}
+
+%\vspace{2\baselineskip}
+\textit{Project Feels:} 
+\begin{itemize}
+	\item Modeled different emotions in \textit{New York Times} article body text. The purpose was to predict tragic, happy and polarizing articles for downstream decision-making.
+	\item Modeling: 7 different deep learning architectures were tested alongside ensemble methods and other linear methods. 
+	\item Data collection: Crowd-sourcing on Amazon Mechanical Turk, using active learning to select successive batches of articles to label.
+	\item Deployment: Google Cloud Services (GKE, Datastore, BigQuery).
+\end{itemize}
+
+\textit{Newsroom Tools and Other:}
+\begin{itemize}
+	\item Used Latent Dirichlet Allocation and TF-IDF to build a related-articles feature for journalists doing research, directly into their publishing platform.
+	\item Used simple character-level modeling and K-Means to cluster text-messages journalists received from Q\&A sessions with readers to facilitate responding.
+	\item Used custom Bayesian model to perform newsletter recommendations for users.
+	\item Used Random Forest and simple decision trees to create powerful and interpretable models of user retention likelihood.
+\end{itemize}
+ 
+
+%    See: \url{https://open.blogs.nytimes.com/2015/08/11/building- the-next-new-york-times-recommendation-engine/.}%\\
+% Statistical analyses of audience segments, causality models for retention.
+%\end{itemize}
+
+\section{Open\\Source Code}
+\textbf{Actionable Recourse Implementation} for \textbf{IBM Fairness 360 Project}. 
+\begin{itemize}
+	\item Implements Mixed-Integer Program (MIP) for providing actionable recourse auditing (see publication section above.) CPLEX and Pyomo based optimizer. 
+	\item \textit{Contributors:} Berk Ustun, \textbf{Alexander Spangher}. \url{https://github.com/ustunb/actionable-recourse}
+	\item \textit{Under development:} To be incorporated into IBM Fairness 360 project, an open-sourced project integrating different fairness and transparency algorithms.
+\end{itemize} 
+
+\textbf{Broca: A Battery of Natural Language Processing Methods} for \textbf{OpenSource News Fellows}
+\begin{itemize}
+	\item A pipeline system of organize a sequence of text-transformations. Automatic intermediate caching for time-saving and debugging.
+	\item \textit{Contributors:} Francis Tseng, \textbf{Alexander Spangher}. \url{https://github.com/frnsys/broca}. 
+	\item \textit{Blog:} Francis Tseng. Introducing Broca. \textit{OpenNews}. \url{https://bit.ly/2DVdrwH}.
+
+\end{itemize}
+
+\section{Languages and Frameworks} 
+\begin{itemize}
+	\item[] Python, SQL, D3.js, Javascript, Node.js, JQuery, Java, Scala, C, C++, C\#, CUDA, OpenCL. Google Cloud Services, Amazon Web Services. Spark, Databricks, Kubernetes, Drone, Docker. Sci-kit Learn, Tensorflow, Keras, PyOmo, CPLEX.
+\end{itemize}
+
+\vspace{2\baselineskip}
+\section{PRESENTATIONS and CONFERENCES}
+\vspace{2\baselineskip}
+\fullhrulefill
+\section{Speaking}
+\begin{enumerate}
+	\item \textbf{Alexander Spangher}. Project Feels and Actionable Recourse. Open Data Science Conference. San Francisco, California. 100+ attendees. October 2018.
+	\item Adam Grant, \textbf{Alexander Spangher}. \textit{New York Times} Young Professionals Interview Series, New York City, NY. 100+ attendees. February 20th, 2018.
+	\item Nicholas Kristof, \textbf{Alexander Spangher}, Hannah Cassius. \textit{New York Times} Young Professionals Interview Series, New York City, NY. 100+ attendees. March 18th, 2017.
+	\item \textbf{Alexander Spangher}. Project Feels: Deep Text Models for Predicting the Emotional Resonance of \textit{New York Times} Articles. Open Data Science Conference. Boston, Massachusetts. 150+ attendees. April 30th-May 3rd, 2018.
+	\item \textbf{Alexander Spangher}, Adam Kelleher. Recommender Systems in Digital Media. DataEngConf Meetup. New York City. 175+ attendees. March 15th, 2018.
+	\item \textbf{Alexander Spangher}. Building the Next \textit{New York Times} Recommendation Engine. Data Engineering Conference. New York City, NY. 100+ attendees. December 13th-15th, 2015.
+\end{enumerate}
+
+\section{Adhoc Reviewer}
+\begin{enumerate}
+	\item Automated Knowledge Base Construction  2019 Conference. Amherst, Massachusetts, May 20th-21st 2019.
+\end{enumerate}
+
+\section{Teaching}
+\begin{enumerate}
+	\item \textit{Guest Lecture}. Mor Namaan, School of Information Science, Cornell Tech. May 20th, 2018.
+	\item \textit{Guest Lecture}. Jonathan Stray, Graduate School of Journalism at Columbia University. February 20th, 2018.
+	\item \textit{Guest Lecture}. Steven Coll, Graduate School of Journalism at Columbia University. December 4th, 2017. 
+	\item \textit{Guest Lecture}. Jonathan Stray, Graduate School of Journalism at Columbia University. February 14th, 2017. 
+	\item \textit{Guest Lecture}. Jonathan Stray, Graduate School of Journalism at Columbia University. February 2nd, 2015.
+	\item \textit{Teaching Assistant}. Francis Champagne, The Developing Brain. Department of Psychology, Columbia University. Spring 2012.
+\end{enumerate}
+
+%\vspace{3\baselineskip}
+\section{RELEVANT\\COURSEWORK}
+\vspace{\baselineskip}
+\fullhrulefill
+\section{}
+\textbf{Carnegie Mellon University, Relevant Courses, Doctoral Degree.}
+\begin{enumerate}
+	\item Osman Yagan. \textit{Applied Stochastic Processes.} ECE 18751. \hfill \textit{Spring 2019.}
+	\item Jia Zhang.\textit{ Service Oriented Computing.} ECE 18655. \hfill \textit{Fall 2018}
+\end{enumerate}
+\textbf{Columbia University, Relevant Courses, Masters Degree.}
+\begin{enumerate}
+	\item Steven Coll. \textit{Investigative Techniques.} JOUR 6018. \hfill \textit{Fall 2017}
+	\item John Paisley. \textit{Machine Learning for Data Science.} COMS 4721. \hfill \textit{Spring 2017}
+	\item Adam Kelleher.\textit{ Causal Inference for Data Science.} COMS 4995. \hfill \textit{Spring 2017}
+	\item Ronald Neath. \textit{Bayesian Statistics.} STAT 4640. \hfill \textit{Spring 2016}
+	\item Eleni Drinea.\textit{ Algorithms for Data Science.} CSOR 4246. \hfill \textit{Fall 2016}
+	\item Zoran Kostic. \textit{Comp. Signals \& Data Processing.} EECS 4750. \hfill \textit{Fall 2016}
+	\item John Paisley.\textit{ Bayesian Models for Machine Learning.} EECS 6720. \hfill \textit{Fall 2016}
+	\item Mark Hansen.\textit{ Data II.} JOUR 6015. \hfill \textit{Fall 2015} 
+	\item James Fan. \textit{Deep Learning and Computer Vision.} EECS 6894. \hfill \textit{Spring 2015}
+	\item Flavio Bartman. \textit{Linear Reg. and Time Series.} STAT 4440. \hfill \textit{Fall 2014}
+	\item Alexandr Andoni. \textit{High Dimensional Data Analysis.} COMS 6998. \hfill \textit{Fall 2014}
+\end{enumerate}
+\textbf{Columbia University, Relevant Courses, Bachelor Degree.}
+\begin{enumerate}
+	\item Itshack Pe'er.\textit{ Machine Learning.} COMS 4771. \hfill \textit{Spring 2014}
+	\item I-Han Hsiao. \textit{Data Visualization.} QMSS 4063. \hfill \textit{Spring 2014}
+	\item Xi Chen. \textit{Analysis of Algorithms.} CSOR 4231. \hfill \textit{Spring 2014}
+	\item Michael Collins.\textit{ Natural Language Processing.} COMS 4705. \hfill \textit{Fall 2013}
+	\item Anargyros Papageorgiou. \textit{Comp. Linear Algebra.} COMS 3251. \hfill \textit{Fall 2013}
+	\item Bodhisattva Sen. \textit{Probability and Statistical Inference}. STAT 4109. \hfill \textit{Fall 2013}
+	\item Martha Kim.\textit{Fundamentals of Computer Systems}. CSEE 3827. \hfill \textit{Fall 2013}
+	\item Salvatore Stolfo. \textit{Artificial Intelligence}. COMS 4701. \hfill \textit{Spring 2013}
+	\item Seung Choi. \textit{Computer Science Theory.} COMS 3261. \hfill \textit{Spring 2013}
+	\item Shlomo Hershkop. \textit{Data Structures in Java.} COMS 3134. \hfill \textit{Spring 2013}
+	\item Jae Lee. \textit{Advanced Programming}. COMS 3157. \hfill \textit{Fall 2012}
+	\item John Kender. \textit{Honors Intro to Computer Science.} COMS 1007. \hfill \textit{Fall 2012}
+\end{enumerate}
+
+\vspace{1\baselineskip}
+\section{OTHER EXPERIENCES}
+\vspace{1\baselineskip}
+\fullhrulefill
+
+\section{Diversity}
+\begin{itemize}
+	\item {\sl Co-chair and Founder:} NYT Young Professionals.
+	\item {\sl Contributor:} Unpublished Black History \url{https://nyti.ms/2KvaGDM}.
+\end{itemize}
+\section{Professional Music Experiences}
+\begin{itemize}
+	\item {\sl Double Bassist} for critically-acclaimed off-Broadway play, \textit{The Dybbuk}. Review: \url{https://bit.ly/2FDSrNB}.
+	\item {\sl Double Bassist}. New York Youth Symphony, Carnegie Hall. \hfill \textit{2006-2010}.
+	\item \textit{Pianist} All-State Piano Recital and Orchestra. \hfill \textit{2008-2010}
+\end{itemize}
+
+
+\vspace{1\baselineskip}
+\section{MEDIA MENTIONS}
+\vspace{1\baselineskip}
+\fullhrulefill
+%\vspace{\baselineskip}
+\section{(Selected)}
+\begin{enumerate}
+	\item \textit{BuzzFeed}. Peter Aldous. How Russia's Trolls Engaged American Voters. \url{https://bit.ly/2TFrhsB}
+	\item \textit{WIRED}. Louise Matsakis. What Does a Fair Algorithm Actually Look Like? \url{https://bit.ly/2C8uyKN}.
+	\item \textit{The Wall Street Journal}. Benjamin Mullin. New York Times Adapts Data Science Tools for Advertisers.  \textit{https://on.wsj.com/2sA4yof}.
+	\item \textit{National Public Radio}. Le Show, February 18th, 2018. \url{https://bit.ly/2TGEpxF}. (A discussion on Project Feels.)
+	\item \textit{Business Insider Japan}. Fumiaki Ishiguro. AI in Advertising at the \textit{New York Times} (Translated). \url{https://bit.ly/2Q57g0D}.
+	\item \textit{Language Log, University of Pennsylvania}. Mark Liberman. Recommended for You. \url{https://bit.ly/2U7qktu}.
+	\item \textit{KnightLab}. Shakeeb Asrar. A quick look at recommendation engines and how the New York Times makes recommendations. \url{https://bit.ly/2Sa6T15}.
+	\url{https://bit.ly/2AIhkBQ}.
+	\item \textit{Women Who Code}. Ema Kaminskaya. ODSC Event Reflections:
+	\item[] \begin{quote}
+			``Alex’s ability to captivate and connect with the audience was a sight to behold. The whole talk felt like an informal conversation between the presenter and 150+ people in the audience. That’s definitely a skill and a bit of a talent to manage such a big crowd in a very conversational way, encouraging questions and sparking curiosity.''% \\ --Ema Kaminskaya. ODSC Event Reflections. March 2018.  Published on \textit{Women Who Code}. \url{https://bit.ly/2AIhkBQ}
+		\end{quote}
+\end{enumerate}
 
 \end{resume}
 \end{document}
